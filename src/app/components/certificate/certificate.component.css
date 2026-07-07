@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:host{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:40px;
+
+    background:linear-gradient(135deg,#edf2f7,#f8fafc);
+
+    font-family:'Inter',sans-serif;
+
+}
+
+.certificate{
+
+    position:relative;
+
+    width:1123px;
+    height:794px;
+
+    background:white;
+
+    overflow:hidden;
+
+    border:4px solid #14213d;
+
+    border-radius:14px;
+
+    box-shadow:
+    14px 14px 0 #14213d,
+    0 28px 60px rgba(0,0,0,.12);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    padding:45px 60px;
+
+}
+
+.top-bar{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:14px;
+
+    background:linear-gradient(90deg,#0f172a,#d4af37,#0f172a);
+
+}
+
+.watermark{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:200px;
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-weight:700;
+
+    color:#14213d;
+
+    opacity:.03;
+
+    letter-spacing:14px;
+
+    pointer-events:none;
+
+}
+
+header{
+
+    text-align:center;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    padding:8px 22px;
+
+    background:#d4af37;
+
+    color:#14213d;
+
+    border:3px solid #14213d;
+
+    border-radius:8px;
+
+    box-shadow:5px 5px 0 #14213d;
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+header h1{
+
+    margin-top:16px;
+
+    font-size:38px;
+
+    font-family:'Space Grotesk',sans-serif;
+
+    color:#14213d;
+
+    letter-spacing:3px;
+
+}
+
+.subtitle{
+
+    margin-top:8px;
+
+    color:#64748b;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+}
+
+.content{
+
+    text-align:center;
+
+}
+
+.presented{
+
+    color:#64748b;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    margin-bottom:10px;
+
+}
+
+.content h2{
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-size:46px;
+
+    color:#14213d;
+
+    font-weight:700;
+
+}
+
+.gold-line{
+
+    width:360px;
+
+    height:3px;
+
+    margin:12px auto 18px;
+
+    background:#d4af37;
+
+    border-radius:999px;
+
+}
+
+.description{
+
+    font-size:15px;
+
+    color:#475569;
+
+    line-height:1.5;
+
+}
+
+.course-box{
+
+    display:inline-block;
+
+    margin:14px 0;
+
+    padding:10px 40px;
+
+    background:#fff8df;
+
+    color:#14213d;
+
+    border:3px solid #14213d;
+
+    border-radius:10px;
+
+    box-shadow:6px 6px 0 #14213d;
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.details{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+
+}
+
+.detail{
+
+    padding:14px;
+
+    border:3px solid #14213d;
+
+    border-radius:10px;
+
+    background:#fafafa;
+
+    box-shadow:4px 4px 0 #14213d;
+
+    text-align:center;
+
+}
+
+.detail span{
+
+    display:block;
+
+    color:#64748b;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:8px;
+
+}
+
+.detail strong{
+
+    color:#14213d;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+}
+
+.signature{
+
+    width:200px;
+
+    text-align:center;
+
+}
+
+.signature-image{
+
+    width:110px;
+
+    margin-bottom:4px;
+
+}
+
+.line{
+
+    border-top:2px solid #14213d;
+
+    margin-bottom:8px;
+
+}
+
+.signature h4{
+
+    color:#14213d;
+
+    font-size:15px;
+
+}
+
+.signature span{
+
+    color:#64748b;
+
+    font-size:12px;
+
+}
+
+.seal{
+
+    width:95px;
+    height:95px;
+
+    border-radius:50%;
+
+    border:5px solid #14213d;
+
+    background:#d4af37;
+
+    color:#14213d;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    box-shadow:6px 6px 0 #14213d;
+
+    transform:rotate(-12deg);
+
+}
+
+.verify{
+
+    text-align:center;
+
+}
+
+.qr{
+
+    width:75px;
+    height:75px;
+
+    border:3px solid #14213d;
+
+    border-radius:6px;
+
+}
+
+.verify small{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#64748b;
+
+    font-size:12px;
+
+}
+
+.actions{
+
+    width:1123px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-bottom:20px;
+
+}
+
+.print-btn{
+
+    padding:14px 28px;
+
+    border:4px solid #14213d;
+
+    border-radius:10px;
+
+    background:#4f46e5;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:6px 6px 0 #14213d;
+
+    transition:.15s;
+
+}
+
+.print-btn:hover{
+
+    transform:translate(-2px,-2px);
+
+    box-shadow:8px 8px 0 #14213d;
+
+}
+
+.print-btn:active{
+
+    transform:translate(3px,3px);
+
+    box-shadow:2px 2px 0 #14213d;
+
+}
+
+@page {
+    size: A4 landscape;
+    margin: 0;
+}
+
+@media print {
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    html,
+    body {
+        width: 297mm;
+        height: 210mm;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    :host {
+        display: block;
+        width: 297mm;
+        height: 210mm;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .certificate {
+
+        width: 297mm;
+        height: 210mm;
+
+        margin: 0;
+        padding: 30mm 18mm 16mm;
+
+        border: 4px solid #14213d;
+        border-radius: 0;
+        box-shadow: none;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+
+        page-break-inside: avoid;
+        break-inside: avoid;
+        page-break-after: avoid;
+    }
+
+    .watermark {
+        opacity: .03;
+    }
+
+    .content h2 {
+        font-size: 40px;
+    }
+
+    .gold-line {
+        width: 320px;
+    }
+
+    .course-box {
+        font-size: 20px;
+        padding: 10px 32px;
+    }
+
+    .details {
+        margin-top: 18px;
+        gap: 12px;
+    }
+
+    .detail {
+        padding: 10px;
+    }
+
+    .detail strong {
+        font-size: 15px;
+    }
+
+    footer {
+        margin-top: 22px;
+    }
+
+    .signature-image {
+        width: 90px;
+    }
+
+    .seal {
+        width: 80px;
+        height: 80px;
+        font-size: 22px;
+    }
+
+    .qr {
+        width: 65px;
+        height: 65px;
+    }
+
+}

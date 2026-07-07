@@ -1,0 +1,113 @@
+@if(student(); as s){
+
+<div class="actions no-print">
+    <button class="print-btn" (click)="printCertificate()">
+        🖨 Print / Download PDF
+    </button>
+</div>
+
+<div class="certificate">
+
+    <div class="watermark">
+        TVK
+    </div>
+
+    <div class="top-bar"></div>
+
+    <header>
+
+        <span class="tag">
+            CERTIFICATE OF COMPLETION
+        </span>
+
+        <h1>TVK Technologies</h1>
+
+        <p class="subtitle">
+            Awarded for Successful Completion of Professional Training
+        </p>
+
+    </header>
+
+    <section class="content">
+
+        <p class="presented">
+            THIS CERTIFICATE IS PROUDLY PRESENTED TO
+        </p>
+
+        <h2>{{ s.name }}</h2>
+
+        <div class="gold-line"></div>
+
+        <p class="description">
+            for successfully completing the professional training programme in
+        </p>
+
+        <div class="course-box">
+            {{ s.course }}
+        </div>
+
+        <p class="description">
+            Your dedication, commitment, and consistent effort throughout the
+            programme are sincerely appreciated.
+        </p>
+
+    </section>
+
+    <section class="details">
+
+        <div class="detail">
+            <span>Duration</span>
+            <strong>{{ s.duration }}</strong>
+        </div>
+
+        <div class="detail">
+            <span>Issue Date</span>
+            <strong>{{ s.issueDate }}</strong>
+        </div>
+
+        <div class="detail">
+            <span>Certificate ID</span>
+            <strong>{{ s.certificateId }}</strong>
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="signature">
+
+            <img
+                src="/signature.png"
+                alt="Signature"
+                class="signature-image"
+            >
+
+            <div class="line"></div>
+
+            <h4>Authorized Signatory</h4>
+
+            <span>TVK Technologies</span>
+
+        </div>
+
+        <div class="seal">
+            TVK
+        </div>
+
+        <div class="verify">
+
+            <img
+                src="/qr.png"
+                alt="QR"
+                class="qr"
+            >
+
+            <small>Verify Certificate</small>
+
+        </div>
+
+    </footer>
+
+</div>
+
+}

@@ -1,0 +1,41 @@
+<div class="content-card">
+  <div class="header-section">
+    <h1>Data Importer</h1>
+    <p>Upload an Excel (.xlsx) file to dynamically generate rows.</p>
+  </div>
+
+  <div class="upload-section">
+    <label for="file-upload" class="upload-label">
+      Choose Excel File
+    </label>
+    <input type="file" id="file-upload" accept=".xlsx, .xls" (change)="onFileChange($event)">
+    <span class="file-name">{{ fileName || 'No file selected' }}</span>
+  </div>
+
+  @if (tableData.length > 0) {
+    <div class="table-container">
+      <table class="brutalist-table">
+        <thead>
+          <tr>
+            @for (header of tableHeaders; track header) {
+              <th>{{ header }}</th>
+            }
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of tableData; track $index) {
+            <tr>
+              @for (header of tableHeaders; track header) {
+                <td>{{ row[header] }}</td>
+              }
+              <td class="action-cell">
+                <button class="btn-small" (click)="onGenerate(row)">Generate</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

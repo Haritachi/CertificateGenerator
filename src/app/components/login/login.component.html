@@ -1,0 +1,30 @@
+<div class="login-card">
+  <h1>Log In</h1>
+  
+  <!-- Add #loginForm="ngForm" and pass it to your submit function -->
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    
+    <div class="input-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" ngModel required #usernameCtrl="ngModel" placeholder="Enter username">
+      
+      <!-- Check the #reference variable for errors -->
+      @if (usernameCtrl.invalid && usernameCtrl.touched) {
+        <span class="error-text">Username is required</span>
+      }
+    </div>
+    
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" ngModel required #passwordCtrl="ngModel" placeholder="Enter password">
+      
+      @if (passwordCtrl.invalid && passwordCtrl.touched) {
+        <span class="error-text">Password is required</span>
+      }
+    </div>
+    
+    <!-- Disable the button entirely if the form is invalid -->
+    <button type="submit" class="btn">Enter</button>
+  </form>
+
+</div>
